@@ -16,7 +16,8 @@ for (const route of routes) {
   });
 }
 
-test('mobile navigation is keyboard/state safe', async ({ page }) => {
+test('mobile navigation is keyboard/state safe', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile-chromium', 'Mobile navigation is hidden by design on desktop.');
   await page.goto('/');
   const toggle = page.locator('[data-menu-toggle]');
   await toggle.click();
