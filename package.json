@@ -6,7 +6,7 @@
   "scripts": {
     "qa:static": "node scripts/static-qa.mjs",
     "qa:playwright": "playwright test",
-    "qa:lighthouse": "lhci autorun",
+    "qa:lighthouse": "lhci autorun && node scripts/lighthouse-summary.mjs",
     "assets:optimize": "node scripts/optimize-images.mjs",
     "qa": "npm run qa:static && npm run qa:playwright && npm run qa:lighthouse"
   },
