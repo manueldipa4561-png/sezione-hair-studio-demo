@@ -1,1 +1,58 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Prenota — SEZIONE</title><link rel="stylesheet" href="./styles.css?v=20260919-3"><script type="module" src="./app.js?v=20260919-3"></script></head><body><a class="skip" href="#main">Salta al contenuto</a><header class="header"><a class="brand" href="./"><strong>SEZIONE</strong><small>HAIR / COLOR / CARE</small></a><nav class="nav"><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a><a href="./prima-volta.html">Prima volta</a><a href="./journal.html">Journal</a></nav><a class="cta" href="./">Home</a><button class="menu-toggle" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false">MENU</button></header><nav id="mobile-nav" class="mobile-nav" aria-hidden="true"><a href="./">Home</a><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a><a href="./prima-volta.html">Prima volta</a><a href="./journal.html">Journal</a></nav><main id="main" class="contact-layout"><section class="contact-copy"><p class="kicker">PRENOTA / DEMO</p><h1 class="display">Scegli ciò che sai. Il resto si chiarisce insieme.</h1><p class="lede">Se conosci già il servizio, prenotalo. Se hai dubbi su forma, colore o manutenzione, scegli consulenza: il booking non dovrebbe costringerti a indovinare.</p><p class="copy">Questa è una simulazione portfolio: nessun dato viene inviato o salvato.</p><figure class="contact-photo"><img src="./assets/salon-01.webp" alt="Interno concept del salone SEZIONE" loading="lazy" decoding="async"></figure><p class="kicker contact-note">UNO SPAZIO REALE DA CAPIRE PRIMA DI ARRIVARE</p></section><section class="contact-form" role="form" aria-labelledby="book-title"><p class="kicker">BOOKING FLOW</p><h2 id="book-title">Una prenotazione breve.</h2><div class="field"><label for="service">Servizio</label><select id="service"><option>Consulenza / non so ancora</option><option>Cut / Shape</option><option>Color / Tone</option><option>Care / Repair</option><option>Finish / Styling</option></select></div><div class="field"><label for="stylist">Stylist</label><select id="stylist"><option>Nessuna preferenza</option><option>Shape specialist</option><option>Color specialist</option><option>Long shape specialist</option></select></div><div class="field"><label for="name">Nome</label><input id="name" autocomplete="off"></div><div class="field"><label for="contact">Email o telefono</label><input id="contact" autocomplete="off"></div><div class="field"><label for="note">Nota facoltativa</label><textarea id="note" placeholder="Non inserire dati personali reali in questa demo."></textarea></div><p class="form-note">Demo portfolio. Nessun dato viene trasmesso.</p><button class="cta-light" type="button" data-demo-book>Simula prenotazione</button></section></main><footer class="footer"><div><div class="brand"><strong>SEZIONE</strong><small>CONCEPT PROJECT</small></div></div><div class="footer-links kicker"><a href="./">Home</a><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a></div></footer></body></html>
+<!doctype html>
+<html lang="it"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#11110f"><meta name="description" content="Prenotazione demo SEZIONE — scegli il servizio o parti dalla consulenza.">
+<title>Prenota — SEZIONE</title><link rel="stylesheet" href="./styles-v2.css?v=6"><script type="module" src="./app-v2.js?v=2"></script>
+</head><body class="booking-page">
+<a class="skip-link" href="#main">Salta al contenuto</a>
+<header class="site-header"><a class="identity" href="./"><span class="identity-mark">SEZIONE</span><span class="identity-sub">HAIR / COLOR / CARE</span></a>
+<nav class="desktop-nav" aria-label="Navigazione principale"><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a><a href="./prima-volta.html">Prima volta</a><a href="./journal.html">Journal</a></nav>
+<a class="button button-dark header-book" href="./">Home</a><button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle><span>Menu</span><span class="menu-lines" aria-hidden="true"></span></button></header>
+<nav class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu><div class="mobile-menu-inner"><a href="./">Home</a><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a><a href="./prima-volta.html">Prima volta</a><a href="./journal.html">Journal</a><p>Concept portfolio / Punto Due Studio</p></div></nav>
+
+<main id="main" class="booking-layout">
+<section class="booking-intro">
+<div class="booking-intro-copy"><p class="eyebrow">PRENOTA / DEMO</p><h1>Scegli ciò che sai.<br><em>Il resto si chiarisce insieme.</em></h1><p class="body-large">Questa simulazione non chiede nome, email o telefono e non invia alcun dato. Mostra soltanto la logica del percorso.</p><div class="booking-trust"><span>NO DATI REALI</span><span>NO PAGAMENTO</span><span>LOCAL DEMO</span></div></div>
+<figure><img src="./assets/salon-01.webp" alt="Visual concept dell'interno SEZIONE" fetchpriority="high" decoding="sync"><figcaption>CONCEPT SPACE / NOT A REAL SALON</figcaption></figure>
+</section>
+
+<section class="booking-flow" aria-labelledby="booking-title" data-booking-demo>
+<div class="booking-progress"><p class="eyebrow">BOOKING FLOW</p><span><b data-booking-step>01</b> / 03</span></div>
+<h2 id="booking-title">Da dove vuoi partire?</h2>
+
+<div class="booking-step is-active" data-step="1">
+<div class="booking-options">
+<button type="button" data-booking-choice="Consulenza"><span>01</span><strong>Non so cosa prenotare.</strong><small>Parti da una consulenza.</small></button>
+<button type="button" data-booking-choice="Cut / Shape"><span>02</span><strong>Cut / Shape</strong><small>Forma, volumi, frangia, texture.</small></button>
+<button type="button" data-booking-choice="Color / Tone"><span>03</span><strong>Color / Tone</strong><small>Colore, gloss, tonalizzazione.</small></button>
+<button type="button" data-booking-choice="Care / Finish"><span>04</span><strong>Care / Finish</strong><small>Cura, gestione, styling.</small></button>
+</div>
+</div>
+
+<div class="booking-step" data-step="2" hidden>
+<p class="booking-question">Hai una preferenza sul tipo di appuntamento?</p>
+<div class="booking-options booking-options-three">
+<button type="button" data-booking-time="Primo slot disponibile"><span>A</span><strong>Primo slot disponibile</strong><small>La scelta più rapida.</small></button>
+<button type="button" data-booking-time="Mattina"><span>B</span><strong>Mattina</strong><small>Preferenza indicativa.</small></button>
+<button type="button" data-booking-time="Pomeriggio"><span>C</span><strong>Pomeriggio</strong><small>Preferenza indicativa.</small></button>
+</div>
+</div>
+
+<div class="booking-step" data-step="3" hidden>
+<div class="booking-summary">
+<p class="eyebrow">RIEPILOGO DEMO</p>
+<h3 data-booking-summary-service>Servizio</h3>
+<p data-booking-summary-time>Preferenza</p>
+<p>In un sito reale, questo punto passerebbe al gestionale del salone per mostrare disponibilità e raccogliere i dati necessari in ambiente sicuro.</p>
+<button class="button button-light" type="button" data-booking-confirm>Simula conferma</button>
+<button class="booking-reset" type="button" data-booking-reset>Ricomincia</button>
+</div>
+</div>
+
+<div class="booking-success" data-booking-success hidden tabindex="-1">
+<p class="eyebrow">DEMO COMPLETATA</p><h2>Nessun dato è stato inviato.</h2><p>Il flusso termina qui. In produzione, solo a questo punto entrerebbe il sistema di prenotazione reale.</p><a class="button button-light" href="./">Torna alla home</a>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div><span class="identity-mark">SEZIONE</span><p>Concept portfolio fittizio di Punto Due Studio. Nessuna prenotazione reale viene effettuata.</p></div><div class="footer-links"><a href="./">Home</a><a href="./servizi.html">Servizi</a><a href="./lavori.html">Lavori</a><a href="./prima-volta.html">Prima volta</a><a href="./journal.html">Journal</a></div></footer>
+</body></html>
