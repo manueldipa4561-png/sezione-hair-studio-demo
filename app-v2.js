@@ -50,3 +50,38 @@ if(reduced){
   },{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   revealItems.forEach(el=>observer.observe(el));
 }
+
+
+/* Booking demo: local state only, no network or persistent storage. */
+const booking=document.querySelector('[data-booking-demo]');
+if(booking){
+  let service='';
+  let time='';
+  const stepLabel=booking.querySelector('[data-booking-step]');
+  const steps=[...booking.querySelectorAll('[data-step]')];
+  const success=booking.querySelector('[data-booking-success]');
+  const showStep=n=>{
+    steps.forEach(el=>{const active=Number(el.dataset.step)===n;el.hidden=!active;el.classList.toggle('is-active',active);});
+    if(stepLabel)stepLabel.textContent=String(n).padStart(2,'0');
+  };
+  booking.querySelectorAll('[data-booking-choice]').forEach(btn=>btn.addEventListener('click',()=>{
+    service=btn.dataset.bookingChoice||'Consulenza';showStep(2);
+  }));
+  booking.querySelectorAll('[data-booking-time]').forEach(btn=>btn.addEventListener('click',()=>{
+    time=btn.dataset.bookingTime||'Primo slot disponibile';
+    const serviceOut=booking.querySelector('[data-booking-summary-service]');
+    const timeOut=booking.querySelector('[data-booking-summary-time]');
+    if(serviceOut)serviceOut.textContent=service;
+    if(timeOut)timeOut.textContent='Preferenza: '+time;
+    showStep(3);
+  }));
+  booking.querySelector('[data-booking-confirm]')?.addEventListener('click',()=>{
+    steps.forEach(el=>el.hidden=true);
+    booking.querySelector(':scope > h2')?.setAttribute('hidden','');
+    success.hidden=false;
+    success.focus();
+  });
+  booking.querySelector('[data-booking-reset]')?.addEventListener('click',()=>{
+    service='';time='';success.hidden=true;booking.querySelector(':scope > h2')?.removeAttribute('hidden');showStep(1);
+  });
+}
