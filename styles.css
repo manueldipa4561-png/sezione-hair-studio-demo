@@ -1,6 +1,6 @@
 :root{
   --paper:#f4f0e8;--paper2:#e8e1d8;--ink:#10110f;--muted:#666861;
-  --red:#d84834;--red-deep:#9e2b20;--steel:#b7b8b3;--glass:#d8d7d1;
+  --red:#b93425;--red-deep:#9e2b20;--steel:#b7b8b3;--glass:#d8d7d1;
   --line:rgba(16,17,15,.16);--line-inv:rgba(244,240,232,.18);
   --max:1500px;--pad:clamp(18px,2.4vw,38px);--r:22px;
 }
