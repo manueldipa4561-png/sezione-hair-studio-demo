@@ -16,13 +16,16 @@ Before each piece:
 8. only then continue.
 
 ## Current piece
-**Home / Header + Hero only**
+**Home / Piece 02 — typographic approach statement**
 
 Primary reference:
 George Northwood — https://www.georgenorthwood.com/
 
-Reference documentation:
+Locked Piece 01:
 `docs/HOME-HERO-REFERENCE-CARD.md`
+
+Current Piece 02:
+`docs/HOME-PIECE-02-REFERENCE-CARD.md`
 
 ## Active frontend
 - `index.html`
