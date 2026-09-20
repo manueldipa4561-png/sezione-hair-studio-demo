@@ -1,7 +1,7 @@
 # HOME / HERO — Reference Card
 
 ## Status
-ACTIVE — first content piece only.
+PAGE LOCKED — approved by founder on 2026-09-20.
 
 ## Primary real-world reference
 George Northwood
