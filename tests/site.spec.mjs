@@ -6,9 +6,10 @@ test('reference-led Home hero renders cleanly', async ({ page }) => {
   expect(response?.ok()).toBeTruthy();
 
   await expect(page.locator('h1')).toHaveCount(1);
-  await expect(page.locator('main > section')).toHaveCount(2);
+  await expect(page.locator('main > section')).toHaveCount(3);
   await expect(page.locator('.hero')).toBeVisible();
   await expect(page.locator('.home-statement')).toBeVisible();
+  await expect(page.locator('.home-space')).toBeVisible();
   await expect(page.locator('.site-header')).toBeVisible();
 
   const overflow = await page.evaluate(() =>
@@ -29,6 +30,17 @@ test('reference hero image loads', async ({ page }) => {
   const image = page.locator('.hero-media img');
   await expect(image).toHaveCount(1);
   await expect.poll(() => image.evaluate(img => img.complete && img.naturalWidth > 300), {
+    timeout: 15000
+  }).toBe(true);
+});
+
+
+test('Piece 03 real salon reference image loads', async ({ page }) => {
+  await page.goto('/');
+  const image = page.locator('.home-space-media img');
+  await expect(image).toHaveCount(1);
+  await image.scrollIntoViewIfNeeded();
+  await expect.poll(() => image.evaluate(img => img.complete && img.naturalWidth > 500), {
     timeout: 15000
   }).toBe(true);
 });
