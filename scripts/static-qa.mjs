@@ -16,7 +16,7 @@ if (!/George Northwood/.test(fs.readFileSync('docs/HOME-HERO-REFERENCE-CARD.md',
 if (!/Rossano Ferretti/.test(fs.readFileSync('docs/HOME-PIECE-02-REFERENCE-CARD.md','utf8'))) fail('missing Piece 02 reference card');
 if (!/Hershesons/.test(fs.readFileSync('docs/HOME-PIECE-03-REFERENCE-CARD.md','utf8'))) fail('missing Piece 03 reference card');
 if (!/Homepage-Mobile-Banner_1200x\.jpg/.test(html)) fail('hero reference image missing');
-if ((html.match(/<section\b/g) || []).length !== 2) fail('Home must contain exactly the two current pieces');
+if ((html.match(/<section\b/g) || []).length !== 3) fail('Home must contain exactly the three current pieces');
 if (!/class="hero"/.test(html)) fail('hero missing');
 if (!/class="home-statement"/.test(html)) fail('piece 02 statement missing');
 if (!/class="home-space"/.test(html)) fail('piece 03 space block missing');
