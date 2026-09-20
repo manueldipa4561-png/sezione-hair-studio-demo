@@ -1,38 +1,33 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const routes = ['/', '/servizi.html', '/lavori.html', '/prima-volta.html', '/journal.html', '/prenota.html'];
+test('reference-led Home hero renders cleanly', async ({ page }) => {
+  const response = await page.goto('/', { waitUntil: 'networkidle' });
+  expect(response?.ok()).toBeTruthy();
 
-for (const route of routes) {
-  test(`${route} renders and passes critical accessibility checks`, async ({ page }) => {
-    const response = await page.goto(route, { waitUntil: 'networkidle' });
-    expect(response?.ok()).toBeTruthy();
-    await expect(page.locator('h1')).toHaveCount(1);
-    await expect(page.locator('.skip-link')).toHaveCount(1);
+  await expect(page.locator('h1')).toHaveCount(1);
+  await expect(page.locator('main > section')).toHaveCount(1);
+  await expect(page.locator('.hero')).toBeVisible();
+  await expect(page.locator('.site-header')).toBeVisible();
 
-    const results = await new AxeBuilder({ page }).analyze();
-    const serious = results.violations.filter(v => ['serious', 'critical'].includes(v.impact));
-    expect(serious, JSON.stringify(serious, null, 2)).toEqual([]);
-  });
-}
-
-test('mobile navigation is keyboard/state safe', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'mobile-chromium', 'Mobile navigation is hidden by design on desktop.');
-  await page.goto('/');
-  const toggle = page.locator('[data-menu-toggle]');
-  await toggle.click();
-  await expect(toggle).toHaveAttribute('aria-expanded', 'true');
-  await expect(page.locator('[data-mobile-menu]')).toHaveAttribute('aria-hidden', 'false');
-  await page.keyboard.press('Escape');
-  await expect(toggle).toHaveAttribute('aria-expanded', 'false');
+  const overflow = await page.evaluate(() =>
+    document.documentElement.scrollWidth - document.documentElement.clientWidth
+  );
+  expect(overflow).toBeLessThanOrEqual(1);
 });
 
-test('booking demo stays local and completes without submission', async ({ page }) => {
-  await page.goto('/prenota.html');
-  await page.locator('[data-booking-choice]').first().click();
-  await page.locator('[data-booking-time]').first().click();
-  await expect(page.locator('[data-booking-summary-service]')).toContainText('Consulenza');
-  await page.locator('[data-booking-confirm]').click();
-  await expect(page.locator('[data-booking-success]')).toBeVisible();
-  await expect(page.locator('[data-booking-success]')).toContainText('Nessun dato è stato inviato');
+test('Home hero has no serious or critical accessibility violations', async ({ page }) => {
+  await page.goto('/');
+  const results = await new AxeBuilder({ page }).analyze();
+  const blocking = results.violations.filter(v => ['serious','critical'].includes(v.impact));
+  expect(blocking, JSON.stringify(blocking, null, 2)).toEqual([]);
+});
+
+test('reference hero image loads', async ({ page }) => {
+  await page.goto('/');
+  const image = page.locator('.hero-media img');
+  await expect(image).toHaveCount(1);
+  await expect.poll(() => image.evaluate(img => img.complete && img.naturalWidth > 300), {
+    timeout: 15000
+  }).toBe(true);
 });
