@@ -246,3 +246,78 @@ a {
     display:none;
   }
 }
+
+
+/* HOME / PIECE 02
+   Primary visual reference: Rossano Ferretti — Salons.
+   Pure typographic interlude: white field, centered serif statement,
+   restrained sans-serif support copy, generous vertical whitespace. */
+
+.home-statement {
+  min-height:760px;
+  padding:150px 28px 160px;
+  background:#ffffff;
+  color:#141414;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.home-statement-kicker {
+  margin:0 0 56px;
+  font-size:9px;
+  line-height:1;
+  font-weight:500;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.home-statement h2 {
+  margin:0;
+  width:min(1080px,92vw);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(56px,7.1vw,108px);
+  line-height:.94;
+  font-weight:500;
+  letter-spacing:-.035em;
+}
+
+.home-statement h2 em {
+  font-style:italic;
+  font-weight:500;
+}
+
+.home-statement-copy {
+  width:min(620px,86vw);
+  margin:52px 0 0;
+  font-size:15px;
+  line-height:1.65;
+  font-weight:400;
+}
+
+@media (max-width:700px) {
+  .home-statement {
+    min-height:620px;
+    padding:110px 18px 120px;
+  }
+
+  .home-statement-kicker {
+    margin-bottom:38px;
+    font-size:8px;
+  }
+
+  .home-statement h2 {
+    width:100%;
+    font-size:clamp(46px,15vw,64px);
+    line-height:.96;
+  }
+
+  .home-statement-copy {
+    width:min(320px,90vw);
+    margin-top:34px;
+    font-size:13px;
+    line-height:1.6;
+  }
+}
