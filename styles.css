@@ -1,0 +1,248 @@
+:root {
+  --white:#ffffff;
+  --black:#080808;
+  --line:rgba(8,8,8,.16);
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background:var(--white);
+  color:var(--black);
+  font-family:"Inter",Arial,sans-serif;
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  min-width:320px;
+  background:var(--white);
+}
+
+a {
+  color:inherit;
+  text-decoration:none;
+}
+
+.skip-link {
+  position:fixed;
+  left:12px;
+  top:12px;
+  z-index:100;
+  padding:10px 14px;
+  background:var(--black);
+  color:var(--white);
+  font-size:12px;
+  transform:translateY(-180%);
+}
+
+.skip-link:focus {
+  transform:translateY(0);
+}
+
+.site-header {
+  height:86px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 28px;
+  border-bottom:1px solid var(--line);
+  background:var(--white);
+  position:relative;
+  z-index:10;
+}
+
+.brand {
+  justify-self:center;
+  font-size:24px;
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-.045em;
+}
+
+.header-side {
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:10px;
+  line-height:1;
+  font-weight:500;
+  letter-spacing:.06em;
+}
+
+.header-side-right {
+  justify-self:end;
+}
+
+.mobile-header-label {
+  display:none;
+}
+
+.hero {
+  min-height:calc(100svh - 86px);
+  height:calc(100svh - 86px);
+  position:relative;
+  overflow:hidden;
+  background:#111;
+  color:var(--white);
+  isolation:isolate;
+}
+
+.hero-media,
+.hero-media img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+
+.hero-media img {
+  object-fit:cover;
+  object-position:center 38%;
+  filter:grayscale(1) contrast(1.04);
+}
+
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.36) 0%, rgba(0,0,0,.10) 46%, rgba(0,0,0,.03) 100%),
+    linear-gradient(0deg, rgba(0,0,0,.34) 0%, transparent 38%);
+  z-index:1;
+}
+
+.hero-copy {
+  position:absolute;
+  left:34px;
+  top:50%;
+  z-index:2;
+  width:min(980px,76vw);
+  transform:translateY(-48%);
+}
+
+.hero-kicker {
+  margin:0 0 24px;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:.08em;
+}
+
+.hero h1 {
+  margin:0;
+  font-family:"Inter",Arial,sans-serif;
+  font-size:clamp(72px,10.2vw,158px);
+  line-height:.82;
+  font-weight:600;
+  letter-spacing:-.065em;
+  text-transform:uppercase;
+}
+
+.hero-subline {
+  width:min(430px,80vw);
+  margin:30px 0 0 4px;
+  font-size:14px;
+  line-height:1.45;
+  font-weight:400;
+}
+
+.hero-bottom {
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:24px;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  align-items:end;
+  font-size:9px;
+  line-height:1;
+  font-weight:500;
+  letter-spacing:.08em;
+}
+
+.hero-bottom-center {
+  justify-self:center;
+}
+
+.hero-bottom span:last-child {
+  justify-self:end;
+}
+
+@media (max-width:700px) {
+  .site-header {
+    height:68px;
+    grid-template-columns:1fr auto;
+    padding:0 18px;
+  }
+
+  .brand {
+    justify-self:start;
+    font-size:21px;
+  }
+
+  .header-side {
+    display:none;
+  }
+
+  .mobile-header-label {
+    display:block;
+    justify-self:end;
+    font-size:9px;
+    font-weight:500;
+    letter-spacing:.08em;
+  }
+
+  .hero {
+    min-height:calc(100svh - 68px);
+    height:calc(100svh - 68px);
+  }
+
+  .hero-media img {
+    object-position:center 30%;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(0deg, rgba(0,0,0,.48) 0%, rgba(0,0,0,.10) 58%, rgba(0,0,0,.12) 100%);
+  }
+
+  .hero-copy {
+    left:18px;
+    right:18px;
+    top:auto;
+    bottom:88px;
+    width:auto;
+    transform:none;
+  }
+
+  .hero-kicker {
+    margin-bottom:16px;
+    font-size:9px;
+  }
+
+  .hero h1 {
+    font-size:clamp(52px,18vw,78px);
+    line-height:.84;
+    letter-spacing:-.06em;
+  }
+
+  .hero-subline {
+    width:min(310px,88vw);
+    margin-top:20px;
+    font-size:12px;
+  }
+
+  .hero-bottom {
+    left:18px;
+    right:18px;
+    bottom:18px;
+    grid-template-columns:1fr 1fr;
+    font-size:8px;
+  }
+
+  .hero-bottom-center {
+    display:none;
+  }
+}
