@@ -14,10 +14,13 @@ if (!/styles\.css/.test(html)) fail('active Home must use styles.css');
 if (/styles-v2\.css|app-v2\.js/.test(html)) fail('legacy frontend linked from active Home');
 if (!/George Northwood/.test(fs.readFileSync('docs/HOME-HERO-REFERENCE-CARD.md','utf8'))) fail('missing real-world reference card');
 if (!/Rossano Ferretti/.test(fs.readFileSync('docs/HOME-PIECE-02-REFERENCE-CARD.md','utf8'))) fail('missing Piece 02 reference card');
+if (!/Hershesons/.test(fs.readFileSync('docs/HOME-PIECE-03-REFERENCE-CARD.md','utf8'))) fail('missing Piece 03 reference card');
 if (!/Homepage-Mobile-Banner_1200x\.jpg/.test(html)) fail('hero reference image missing');
 if ((html.match(/<section\b/g) || []).length !== 2) fail('Home must contain exactly the two current pieces');
 if (!/class="hero"/.test(html)) fail('hero missing');
 if (!/class="home-statement"/.test(html)) fail('piece 02 statement missing');
+if (!/class="home-space"/.test(html)) fail('piece 03 space block missing');
+if (!/OPTIMIZE_BACKUP_PRODUCT_HERSH_JA_9882-1-1500x932\.jpg/.test(html)) fail('Piece 03 real reference image missing');
 if (!/class="site-header"/.test(html)) fail('header missing');
 if (css.length > 40 * 1024) fail('reset CSS exceeds 40 KB source budget');
 
@@ -30,4 +33,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Static QA PASS — reference-led Home hero + Piece 02.');
+console.log('Static QA PASS — reference-led Home Pieces 01–03.');
