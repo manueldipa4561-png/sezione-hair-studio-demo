@@ -1,35 +1,34 @@
-# SEZIONE — Hair / Color / Care
+# SEZIONE Hair Studio — Reference-Led Rebuild
 
-Fictional portfolio concept by Punto Due Studio.
+Active rebuild started from zero on `main`.
 
-## Direction
-A contemporary Italian hair studio built around form, color and maintenance rather than generic beauty-luxury language.
+## Current production rule
+One page **or one major content piece at a time**.
 
-Visual system:
-- warm chalk / paper
-- dark structural ink
-- lacquer / tomato red signal
-- editorial serif + neutral sans
-- image-led layouts with explicit concept disclosure
+Before each piece:
+1. choose one real high-end website as primary reference;
+2. create a Reference Card;
+3. inspect palette, typography, photography, spacing, grid and CTA/navigation behavior;
+4. source real imagery before generating anything;
+5. implement directly in GitHub;
+6. review visually on Netlify;
+7. revise or lock;
+8. only then continue.
 
-## Pages
-- Home — `index.html`
-- Servizi — `servizi.html`
-- Lavori — `lavori.html`
-- Prima volta — `prima-volta.html`
-- Journal — `journal.html`
-- Prenota — `prenota.html`
+## Current piece
+**Home / Header + Hero only**
 
-## Shared production system
-- `styles-v2.css`
-- `app-v2.js`
-- `assets/`
-- `netlify.toml`
+Primary reference:
+George Northwood — https://www.georgenorthwood.com/
 
-## Safety / portfolio disclosure
-The salon and hair imagery is simulated concept material. It must never be presented as real client work, a real salon location, or verified customer outcomes.
+Reference documentation:
+`docs/HOME-HERO-REFERENCE-CARD.md`
 
-The booking experience is a local interaction demo only. It does not submit, store or transmit personal information and does not process payments.
+## Active frontend
+- `index.html`
+- `styles.css`
 
-## Rebuild workflow
-This version was rebuilt page by page on `rebuild/zero-based-page-by-page`, with the previous production commit retained in Git history as rollback.
+Older HTML/CSS/JS files remain temporarily in the repository as unlinked legacy material while the site is rebuilt piece by piece. They are not the active design direction.
+
+## Image-rights rule
+Third-party web imagery may be used only as temporary research/demo reference material. Commercial publication requires client-owned or properly licensed replacement media.
