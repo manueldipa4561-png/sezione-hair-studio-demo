@@ -11,15 +11,16 @@ Before each piece:
 3. inspect palette, typography, photography, spacing, grid and CTA/navigation behavior;
 4. source real imagery before generating anything;
 5. implement directly in GitHub;
-6. review visually on Netlify;
-7. revise or lock;
-8. only then continue.
+6. run and fix QA until fully green;
+7. review visually on Netlify;
+8. revise or lock;
+9. only then continue.
 
 ## Current piece
 **Home / Piece 03 — salon-space editorial block**
 
 Primary reference:
-George Northwood — https://www.georgenorthwood.com/
+Hershesons — Fitzrovia / https://www.hershesons.com/pages/stores
 
 Locked Piece 01:
 `docs/HOME-HERO-REFERENCE-CARD.md`
