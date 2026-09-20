@@ -6,8 +6,9 @@ test('reference-led Home hero renders cleanly', async ({ page }) => {
   expect(response?.ok()).toBeTruthy();
 
   await expect(page.locator('h1')).toHaveCount(1);
-  await expect(page.locator('main > section')).toHaveCount(1);
+  await expect(page.locator('main > section')).toHaveCount(2);
   await expect(page.locator('.hero')).toBeVisible();
+  await expect(page.locator('.home-statement')).toBeVisible();
   await expect(page.locator('.site-header')).toBeVisible();
 
   const overflow = await page.evaluate(() =>
