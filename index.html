@@ -4,226 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#f3efe7">
-  <meta name="description" content="SEZIONE — contemporary hair studio concept by Punto Due Studio.">
-  <title>SEZIONE — Hair / Color / Care</title>
-  <link rel="preload" as="image" href="./assets/look-01-hq.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="./styles-v2.css?v=1">
-  <script type="module" src="./app-v2.js?v=1"></script>
+  <meta name="theme-color" content="#ffffff">
+  <title>SEZIONE — Hair Studio</title>
+  <meta name="description" content="SEZIONE Hair Studio — concept demo by Punto Due Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.georgenorthwood.com">
+  <link rel="preload" as="image" href="https://www.georgenorthwood.com/cdn/shop/files/Homepage-Mobile-Banner_1200x.jpg?v=1665410196" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Salta al contenuto</a>
+  <a class="skip-link" href="#hero">Vai al contenuto</a>
 
-  <header class="site-header" data-header>
-    <a class="identity" href="./" aria-label="SEZIONE — Home">
-      <span class="identity-mark">SEZIONE</span>
-      <span class="identity-sub">HAIR / COLOR / CARE</span>
-    </a>
+  <header class="site-header" aria-label="Navigazione principale">
+    <div class="header-side header-side-left" aria-hidden="true">
+      <span>STUDIO</span>
+      <span>SERVIZI</span>
+    </div>
 
-    <nav class="desktop-nav" aria-label="Navigazione principale">
-      <a href="./servizi.html">Servizi</a>
-      <a href="./lavori.html">Lavori</a>
-      <a href="./prima-volta.html">Prima volta</a>
-      <a href="./journal.html">Journal</a>
-    </nav>
+    <a class="brand" href="#hero" aria-label="SEZIONE — Home">SEZIONE</a>
 
-    <a class="button button-dark header-book" href="./prenota.html">Prenota</a>
+    <div class="header-side header-side-right" aria-hidden="true">
+      <span>LAVORI</span>
+      <span>PRENOTA</span>
+    </div>
 
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
-      <span>Menu</span>
-      <span class="menu-lines" aria-hidden="true"></span>
-    </button>
+    <div class="mobile-header-label" aria-hidden="true">HAIR STUDIO</div>
   </header>
 
-  <nav class="mobile-menu" id="mobile-menu" aria-hidden="true" data-mobile-menu>
-    <div class="mobile-menu-inner">
-      <a href="./servizi.html">Servizi</a>
-      <a href="./lavori.html">Lavori</a>
-      <a href="./prima-volta.html">Prima volta</a>
-      <a href="./journal.html">Journal</a>
-      <a href="./prenota.html">Prenota</a>
-      <p>Concept portfolio / Punto Due Studio</p>
-    </div>
-  </nav>
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <picture class="hero-media" aria-hidden="true">
+        <source media="(max-width: 700px)" srcset="https://www.georgenorthwood.com/cdn/shop/files/Homepage-Mobile-Banner_768x.jpg?v=1665410196">
+        <img
+          src="https://www.georgenorthwood.com/cdn/shop/files/Homepage-Mobile-Banner_1200x.jpg?v=1665410196"
+          alt=""
+          width="1200"
+          height="1600"
+          fetchpriority="high"
+          decoding="async">
+      </picture>
 
-  <main id="main">
-    <section class="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
+
       <div class="hero-copy">
-        <p class="eyebrow">CONTEMPORARY HAIR STUDIO · MILANO CONCEPT</p>
-        <h1>
-          <span>La forma</span>
-          <span>prima del</span>
-          <span class="hero-accent">trend.</span>
-        </h1>
-        <div class="hero-bottom">
-          <p class="intro">Taglio, colore e cura costruiti intorno a texture, abitudini e manutenzione reale.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="./prenota.html">Prenota</a>
-            <a class="text-action" href="./servizi.html">Trova il servizio giusto</a>
-          </div>
-        </div>
+        <p class="hero-kicker">PARMA / HAIR STUDIO</p>
+        <h1 id="hero-title">FORMA.<br>TEXTURE.<br>PERSONA.</h1>
+        <p class="hero-subline">Taglio, colore e cura pensati per funzionare anche fuori dal salone.</p>
       </div>
 
-      <div class="hero-visual" aria-label="Visual concept SEZIONE">
-        <figure class="hero-image hero-image-main">
-          <img src="./assets/look-01-hq.webp" alt="Visual concept SEZIONE con taglio corto ramato" width="1122" height="1402" fetchpriority="high" decoding="sync">
-        </figure>
-        <figure class="hero-image hero-image-small">
-          <img src="./assets/look-02-hq.webp" alt="Visual concept SEZIONE con taglio brunette a strati" loading="lazy" decoding="async">
-        </figure>
-        <div class="hero-note">
-          <span>01</span>
-          <p>Concept visual.<br>Non lavoro cliente reale.</p>
-        </div>
+      <div class="hero-bottom">
+        <span>SEZIONE / 01</span>
+        <span class="hero-bottom-center">REFERENCE-LED REBUILD</span>
+        <span>SCROLL</span>
       </div>
-    </section>
-
-    <section class="statement section-pad" data-reveal>
-      <div class="statement-number">01</div>
-      <div class="statement-copy">
-        <p class="eyebrow">APPROCCIO</p>
-        <h2>Un salone non dovrebbe chiederti di conoscere il linguaggio tecnico prima di prenotare.</h2>
-        <p class="body-large">SEZIONE organizza l’esperienza partendo da ciò che vuoi ottenere, da quanto vuoi mantenere il risultato e dal tempo che vuoi dedicargli. Il servizio arriva dopo.</p>
-      </div>
-    </section>
-
-    <section class="service-selector section-pad" data-reveal>
-      <div class="section-heading">
-        <p class="eyebrow">02 / SCEGLI PER BISOGNO</p>
-        <h2>Parti da te.<br>Non dal menu.</h2>
-      </div>
-
-      <div class="service-grid">
-        <a class="service-card" href="./servizi.html">
-          <span class="service-index">01</span>
-          <div>
-            <p class="eyebrow">CUT / SHAPE</p>
-            <h3>Cambiare forma.</h3>
-            <p>Taglio, proporzioni, frangia, livelli e texture naturale.</p>
-          </div>
-          <span class="service-link">Scopri</span>
-        </a>
-
-        <a class="service-card service-card-accent" href="./servizi.html">
-          <span class="service-index">02</span>
-          <div>
-            <p class="eyebrow">COLOR / TONE</p>
-            <h3>Cambiare tono.</h3>
-            <p>Colore, gloss, dimensione e ricrescita pensati come un unico sistema.</p>
-          </div>
-          <span class="service-link">Scopri</span>
-        </a>
-
-        <a class="service-card" href="./servizi.html">
-          <span class="service-index">03</span>
-          <div>
-            <p class="eyebrow">CARE / FINISH</p>
-            <h3>Gestirli meglio.</h3>
-            <p>Cura e styling che funzionano anche dopo l’appuntamento.</p>
-          </div>
-          <span class="service-link">Scopri</span>
-        </a>
-
-        <a class="service-card service-card-dark" href="./prima-volta.html">
-          <span class="service-index">04</span>
-          <div>
-            <p class="eyebrow">FIRST VISIT</p>
-            <h3>Non sai cosa prenotare?</h3>
-            <p>Parti dalla consulenza. Il servizio si definisce con il tempo giusto.</p>
-          </div>
-          <span class="service-link">Prima volta</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="work section-pad" data-reveal>
-      <div class="section-heading work-heading">
-        <div>
-          <p class="eyebrow">03 / LAVORI</p>
-          <h2>Il risultato parla prima del claim.</h2>
-        </div>
-        <p class="body-large">Visual editoriali, forma leggibile e informazioni utili. In un progetto reale ogni lavoro sarebbe collegato a servizio, stylist e livello di manutenzione.</p>
-      </div>
-
-      <div class="work-grid">
-        <figure class="work-card work-card-tall">
-          <img src="./assets/look-03-hq.webp" alt="Visual concept SEZIONE con crop corto texturizzato" loading="lazy" decoding="async">
-          <figcaption><span>SHORT / TEXTURE</span><span>CONCEPT 03</span></figcaption>
-        </figure>
-
-        <figure class="work-card">
-          <img src="./assets/look-04-hq.webp" alt="Visual concept SEZIONE con colore rame su capelli lunghi" loading="lazy" decoding="async">
-          <figcaption><span>COLOR / COPPER</span><span>CONCEPT 04</span></figcaption>
-        </figure>
-      </div>
-
-      <a class="button button-outline" href="./lavori.html">Vedi i lavori</a>
-    </section>
-
-    <section class="studio" data-reveal>
-      <figure class="studio-image">
-        <img src="./assets/salon-01.webp" alt="Visual concept degli interni del salone SEZIONE" loading="lazy" decoding="async">
-      </figure>
-
-      <div class="studio-copy section-pad">
-        <p class="eyebrow">04 / LO SPAZIO</p>
-        <h2>Atelier, non scenografia.</h2>
-        <p class="body-large">Luce, acciaio, vetro e superfici materiche sostengono consultazione e precisione. Lo spazio non deve sembrare un hotel: deve funzionare bene per chi lavora e per chi arriva.</p>
-        <a class="text-action" href="./prima-volta.html">Scopri la prima visita</a>
-      </div>
-
-      <figure class="studio-detail">
-        <img src="./assets/salon-02.webp" alt="Dettaglio visual concept delle postazioni SEZIONE" loading="lazy" decoding="async">
-      </figure>
-    </section>
-
-    <section class="journal-strip section-pad" data-reveal>
-      <div class="section-heading">
-        <p class="eyebrow">05 / JOURNAL</p>
-        <h2>Il risultato continua fuori dal salone.</h2>
-      </div>
-
-      <div class="journal-list">
-        <a href="./journal.html">
-          <span>01</span>
-          <strong>Quanto vuoi mantenere questo colore?</strong>
-          <em>Color / maintenance</em>
-        </a>
-        <a href="./journal.html">
-          <span>02</span>
-          <strong>Taglio bello oggi o forma che regge tra sei settimane?</strong>
-          <em>Shape / timing</em>
-        </a>
-        <a href="./journal.html">
-          <span>03</span>
-          <strong>Se non sai cosa prenotare, non indovinare.</strong>
-          <em>First visit / guide</em>
-        </a>
-      </div>
-    </section>
-
-    <section class="booking-callout section-pad" data-reveal>
-      <p class="eyebrow">06 / PRENOTA</p>
-      <div>
-        <h2>La scelta giusta prima dell’appuntamento.</h2>
-        <p>Questa demo non raccoglie dati reali. In produzione il flusso verrebbe collegato al gestionale scelto dal salone.</p>
-      </div>
-      <a class="button button-light" href="./prenota.html">Prenota</a>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div>
-      <span class="identity-mark">SEZIONE</span>
-      <p>Concept portfolio fittizio di Punto Due Studio. Visual simulati, non clienti o spazi reali.</p>
-    </div>
-    <div class="footer-links">
-      <a href="./servizi.html">Servizi</a>
-      <a href="./lavori.html">Lavori</a>
-      <a href="./prima-volta.html">Prima volta</a>
-      <a href="./journal.html">Journal</a>
-      <a href="./prenota.html">Prenota</a>
-    </div>
-  </footer>
 </body>
 </html>
