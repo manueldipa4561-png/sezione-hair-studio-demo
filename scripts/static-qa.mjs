@@ -16,6 +16,7 @@ if (!/George Northwood/.test(fs.readFileSync('docs/HOME-HERO-REFERENCE-CARD.md',
 if (!/Homepage-Mobile-Banner_1200x\.jpg/.test(html)) fail('hero reference image missing');
 if ((html.match(/<section\b/g) || []).length !== 1) fail('reset Home must contain only the first approved content piece');
 if (!/class="hero"/.test(html)) fail('hero missing');
+if (!/class="home-statement"/.test(html)) fail('piece 02 statement missing');
 if (!/class="site-header"/.test(html)) fail('header missing');
 if (css.length > 40 * 1024) fail('reset CSS exceeds 40 KB source budget');
 
@@ -28,4 +29,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Static QA PASS — reference-led Home hero only.');
+console.log('Static QA PASS — reference-led Home hero + Piece 02.');
