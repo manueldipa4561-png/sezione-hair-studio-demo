@@ -16,7 +16,7 @@ Before each piece:
 8. only then continue.
 
 ## Current piece
-**Home / Piece 02 — typographic approach statement**
+**Home / Piece 03 — salon-space editorial block**
 
 Primary reference:
 George Northwood — https://www.georgenorthwood.com/
@@ -24,8 +24,11 @@ George Northwood — https://www.georgenorthwood.com/
 Locked Piece 01:
 `docs/HOME-HERO-REFERENCE-CARD.md`
 
-Current Piece 02:
+Locked Piece 02:
 `docs/HOME-PIECE-02-REFERENCE-CARD.md`
+
+Current Piece 03:
+`docs/HOME-PIECE-03-REFERENCE-CARD.md`
 
 ## Active frontend
 - `index.html`
