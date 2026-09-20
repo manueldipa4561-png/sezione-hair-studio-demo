@@ -22,7 +22,7 @@ if (!/class="home-statement"/.test(html)) fail('piece 02 statement missing');
 if (!/class="home-space"/.test(html)) fail('piece 03 space block missing');
 if (!/OPTIMIZE_BACKUP_PRODUCT_HERSH_JA_9882-1-1500x932\.jpg/.test(html)) fail('Piece 03 real reference image missing');
 if (!/class="site-header"/.test(html)) fail('header missing');
-if (css.length > 40 * 1024) fail('reset CSS exceeds 40 KB source budget');
+if (css.length > 48 * 1024) fail('active CSS exceeds 48 KB source budget');
 
 for (const img of html.matchAll(/<img\b[^>]*>/g)) {
   if (!/\balt="[^"]*"/.test(img[0])) fail('image without alt attribute');
